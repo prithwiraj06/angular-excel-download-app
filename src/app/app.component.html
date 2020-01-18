@@ -1,0 +1,25 @@
+<h3 class="heading">Employee Data</h3>
+<hr>
+<div>
+  <label class="float-right link-style" (click)="downloadAsExcel()">Download As Excel</label>
+</div>
+<div>
+  <table id="employees">
+    <tr>
+      <th>Employee Id</th>
+      <th>Employee Name</th>
+      <th>Designation</th>
+      <th>Date of birth</th>
+      <th>Gender</th>
+      <th>Contact Number</th>
+    </tr>
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.employeeId}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.designation}}</td>
+      <td>{{employee.dateOfBirth | date}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.mobileNumber}}</td>
+    </tr>
+  </table>
+</div>
